@@ -1,0 +1,322 @@
+@media (min-width: $mediaSizeMob) {
+    nav {
+        padding-top: 10%;
+        padding-bottom: 10%;
+
+        ul  {
+            display: none;
+        }
+
+        > section {
+            padding-top: 1%;
+            padding-bottom: 1%;
+            height: 5vh;
+            border-top: 1px solid $defaultGray;
+            border-bottom: 1px solid $defaultGray;
+        }
+
+        > article {
+            display: flex;
+            column-gap: 5vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        i {
+            font-size: $iconSizeMob;
+        }
+    
+        h1 {
+            width: 40%;
+            font-weight: 300;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+    }
+ 
+    header {
+        display: flex;
+        position: relative;
+        height: 50vh;
+        
+        article {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(50,50,50,.4);
+            @include flexColumn;
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            row-gap: 4vh;
+
+            > aside {
+                @include flexColumn;
+                align-items: center;
+                row-gap: 2vh;
+                text-align: center;
+                color: whitesmoke;
+            }
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        h1 {
+            text-transform: capitalize;
+            color: white;
+            font-weight: 300;
+            font-size: 50px;
+        }
+    }
+
+
+    .features {
+        padding: 5%;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        row-gap: 5vh;
+
+        > section {
+            @include flexColumn;
+            row-gap: 4vh;
+        }
+
+        article {
+            @include flexElement(row,3vh,0);
+        }
+
+        aside {
+            @include flexElement(column, 0, 3vh);
+        }
+
+        h3 {
+            font-size: 28px;
+        }
+
+        i {
+            font-weight: 700;
+            font-size: 76px;
+        }
+    }
+
+    .activities {
+        @include flexContent(column, center, center, 0 , 7vh);
+
+        > article {
+            @include bgImage("/img/pic-04.jpg");
+            height: 20vh;
+            width: 90%;
+        }
+
+        aside {
+            width: 100%;
+            height: 100%;
+            @include flexText;
+            color: white;
+            background-color: rgba(30,30,30,.7);
+        }
+
+        > section {
+            width: 90%;
+            @include flexContent(column, center, center, 0, 5vh);
+        }
+    
+        h2 {
+            font-size: $defaultH2SizeMob;
+            font-weight: 300;
+        }
+
+        figure {
+            padding: 5%;
+            width: 90%;
+            border: 1px solid $defaultGray;
+            @include flexContent(column, center, center, 0, 2vh);
+        }
+
+        figcaption {
+            @include flexColumn;
+            row-gap: 2vh;
+            line-height: 1.5;
+            color : $defaultColor;
+            width: 85%;
+        }
+
+        img {
+            width: 25vh;
+            height: 25vh;
+        }
+
+        h4 {
+            color: $defaultBlue;
+        }
+    }
+
+    #vision, #mission {
+        border: 1px solid $defaultColor;
+        @include flexColumn;
+        row-gap: 4vh;
+        padding: 5%;
+        width: 90%;
+    }
+
+    #mission {
+        display: none;
+    }
+
+    .company {
+        @include flexColumn;
+        align-items: center;
+        row-gap: 3vh;
+
+        img {
+            width: 100%;
+        }
+        
+        > section {
+            width: 90%;
+            @include flexColumn;
+            align-items: center;
+        }
+
+        > figure {
+            @include flexColumn;
+            align-items: center;
+            row-gap: 3vh;
+        }
+
+        figcaption {
+            width: 80%;
+            @include flexContent(column,center, center,0,5vh);
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: $defaultH2SizeMob;
+            font-weight: 400;
+            color: $defaultColor;
+        }
+
+        aside {
+            display: flex;
+            justify-content: right;
+            width: 100%;
+        }
+
+        a {
+            border : 1px solid $defaultColor;
+            text-decoration: none;
+            font-weight: 400;
+            width: 40%;
+            text-align: center;
+            padding: 2%;
+            font-size: 20px;
+            color: $defaultColor;
+        }
+
+        > section {
+            
+            > article {
+                display: flex;
+                width: 100%;
+            }
+
+            p {
+                width: 100%;
+                line-height: 1.5;
+            }
+        }
+        
+        article > a {
+            width: 100%; 
+            border-bottom: 0px;
+        }
+        
+        article > a:last-child {
+            border-left: 0px;
+            background-color: gainsboro;
+            transition: .4s;
+        }
+
+        article > a:last-child:hover {
+            background-color: transparent;
+
+            #vision {
+                display: none;
+            }
+            
+            #mission {
+                display: flex;
+            }
+        }
+    }
+    
+
+    .contact {
+        @include flexColumn;
+        row-gap: 5vh;
+
+        > section {
+            @include flexColumn;
+            align-items: center;
+            row-gap: 2vh;
+        }
+
+        form {
+            @include flexElement(column, 0, 3vh);
+            width: 90%;
+            row-gap: 2vh;
+        }
+
+        h4 {
+            width: 90%;
+            text-align: right;
+            font-weight: 300;
+            color: $defaultColor;
+            font-size: 24px;
+        }
+
+        aside {
+            display: flex;
+            justify-content: right;
+        }
+
+        [type="submit"] {
+            width: 35%;
+            padding: 2%;
+            background-color: white;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        > figure {
+            row-gap: 3vh;
+        }
+
+        > figure, figcaption {
+            @include flexColumn;
+            align-items: center;
+        }
+
+        figcaption {
+            width: 90%;
+            columns: $defaultColor;
+        }
+
+        img {
+            width: 90%;
+        }
+    }
+
+    input, textarea {
+        border: 1px solid $defaultGray;
+        padding: 3%;
+    }
+
+    textarea {
+        height: 30vh;
+        resize: none;
+    }
+
+
+}
