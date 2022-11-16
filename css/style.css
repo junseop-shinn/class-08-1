@@ -342,6 +342,26 @@ details {
   .contact img {
     width: 90%;
   }
+  footer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    align-items: center;
+    color: #5F5F5F;
+    padding: 5%;
+  }
+  footer a {
+    text-decoration: none;
+    color: #5F5F5F;
+    padding: 5%;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+  }
   input, textarea {
     border: 1px solid #909090;
     padding: 3%;
