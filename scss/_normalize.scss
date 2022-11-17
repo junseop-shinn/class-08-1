@@ -31,3 +31,16 @@ video {
 details {
     display: none;
 }
+
+ul, p {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: initial;
+}
+
+a {
+    cursor: pointer;
+}
